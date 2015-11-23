@@ -6,6 +6,10 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprites name="GameMenu">
+      <sprite>sprites\spr_game_logo</sprite>
+      <sprite>sprites\spr_menu_arrow</sprite>
+    </sprites>
     <sprites name="Entities">
       <sprite>sprites\spr_player</sprite>
     </sprites>
@@ -18,9 +22,20 @@
   <scripts name="scripts">
     <scripts name="Objects">
       <scripts name="Controllers">
-        <scripts name="Game">
+        <scripts name="GameStart">
           <script>scripts\cont_game_start_create.gml</script>
           <script>scripts\cont_game_start_step.gml</script>
+        </scripts>
+        <scripts name="GameMenu">
+          <script>scripts\cont_game_menu_create.gml</script>
+          <script>scripts\cont_game_menu_step.gml</script>
+          <script>scripts\cont_game_menu_draw.gml</script>
+        </scripts>
+        <scripts name="PauseScreen">
+          <script>scripts\cont_pause_screen_create.gml</script>
+          <script>scripts\cont_pause_screen_step.gml</script>
+          <script>scripts\cont_pause_screen_draw.gml</script>
+          <script>scripts\cont_pause_screen_draw_gui.gml</script>
         </scripts>
       </scripts>
       <scripts name="Entities">
@@ -41,9 +56,15 @@
       </scripts>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_04b03_gui</font>
+    <font>fonts\fnt_04b03_menu</font>
+  </fonts>
   <objects name="objects">
     <objects name="Controllers">
       <object>objects\cont_game_start</object>
+      <object>objects\cont_game_menu</object>
+      <object>objects\cont_pause_screen</object>
     </objects>
     <objects name="Entities">
       <object>objects\obj_player</object>
@@ -54,6 +75,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_initialize</room>
+    <room>rooms\rm_menu</room>
     <room>rooms\rm_level_1</room>
   </rooms>
   <help>

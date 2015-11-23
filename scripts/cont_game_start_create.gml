@@ -1,5 +1,5 @@
 /**
- * Controller Game Start: Set Global Variables
+ * Game Start Controller: Set Global Variables
  *
  * The "cont_game_start" is a persistent object that gets added
  * in the creation code of "rm_initialize" when the game begins.
